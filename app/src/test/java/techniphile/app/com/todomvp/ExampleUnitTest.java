@@ -1,4 +1,4 @@
-package techniphile.app.com.todomvp;
+package technophile.app.com.todomvp;
 
 import org.junit.Test;
 

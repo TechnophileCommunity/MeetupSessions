@@ -1,4 +1,4 @@
-package techniphile.app.com.todomvp.ui.add_task;
+package technophile.app.com.todomvp.ui.add_task;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import techniphile.app.com.todomvp.R;
-import techniphile.app.com.todomvp.repository.local.AppDatabase;
+import technophile.app.com.todomvp.R;
+import technophile.app.com.todomvp.repository.local.AppDatabase;
 
 public class AddTaskActivity extends AppCompatActivity implements AddTaskView {
 
@@ -28,7 +28,6 @@ public class AddTaskActivity extends AppCompatActivity implements AddTaskView {
         ButterKnife.bind(this);
 
         addTaskPresenter = new AddTaskPresenter(this, AppDatabase.getInstance(this).taskDao());
-
     }
 
     @OnClick(R.id.btn_add_task)

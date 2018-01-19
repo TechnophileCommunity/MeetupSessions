@@ -1,4 +1,4 @@
-package techniphile.app.com.todomvp.ui.list_task;
+package technophile.app.com.todomvp.ui.list_task;
 
 import android.content.Intent;
 import android.support.design.widget.Snackbar;
@@ -15,10 +15,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import techniphile.app.com.todomvp.R;
-import techniphile.app.com.todomvp.ui.add_task.AddTaskActivity;
-import techniphile.app.com.todomvp.repository.local.AppDatabase;
-import techniphile.app.com.todomvp.repository.local.Task;
+import technophile.app.com.todomvp.R;
+import technophile.app.com.todomvp.ui.add_task.AddTaskActivity;
+import technophile.app.com.todomvp.repository.local.AppDatabase;
+import technophile.app.com.todomvp.repository.local.Task;
 
 public class TaskListActivity extends AppCompatActivity implements TaskListView {
 

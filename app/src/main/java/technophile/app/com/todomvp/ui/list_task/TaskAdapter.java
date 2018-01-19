@@ -1,4 +1,4 @@
-package techniphile.app.com.todomvp.ui.list_task;
+package technophile.app.com.todomvp.ui.list_task;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,8 +12,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import techniphile.app.com.todomvp.R;
-import techniphile.app.com.todomvp.repository.local.Task;
+import technophile.app.com.todomvp.R;
+import technophile.app.com.todomvp.repository.local.Task;
 
 /**
  * Created by moinkhan on 18-01-2018.

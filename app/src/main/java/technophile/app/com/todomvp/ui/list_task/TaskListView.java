@@ -1,8 +1,8 @@
-package techniphile.app.com.todomvp.ui.list_task;
+package technophile.app.com.todomvp.ui.list_task;
 
 import java.util.List;
 
-import techniphile.app.com.todomvp.repository.local.Task;
+import technophile.app.com.todomvp.repository.local.Task;
 
 /**
  * Created by moinkhan on 17-01-2018.

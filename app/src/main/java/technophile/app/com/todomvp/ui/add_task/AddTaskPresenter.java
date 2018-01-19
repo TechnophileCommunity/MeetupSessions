@@ -1,8 +1,8 @@
-package techniphile.app.com.todomvp.ui.add_task;
+package technophile.app.com.todomvp.ui.add_task;
 
-import techniphile.app.com.todomvp.repository.local.Task;
-import techniphile.app.com.todomvp.repository.local.TaskDao;
-import techniphile.app.com.todomvp.utils.StringUtils;
+import technophile.app.com.todomvp.repository.local.Task;
+import technophile.app.com.todomvp.repository.local.TaskDao;
+import technophile.app.com.todomvp.utils.StringUtils;
 
 /**
  * Created by moinkhan on 18-01-2018.

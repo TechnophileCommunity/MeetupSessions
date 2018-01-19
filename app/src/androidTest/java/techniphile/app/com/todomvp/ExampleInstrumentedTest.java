@@ -1,4 +1,4 @@
-package techniphile.app.com.todomvp;
+package technophile.app.com.todomvp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("techniphile.app.com.todomvp", appContext.getPackageName());
+        assertEquals("technophile.app.com.todomvp", appContext.getPackageName());
     }
 }
