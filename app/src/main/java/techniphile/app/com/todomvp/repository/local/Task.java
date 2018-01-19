@@ -1,4 +1,4 @@
-package techniphile.app.com.todomvp.data;
+package techniphile.app.com.todomvp.repository.local;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey;
  * Created by moinkhan on 18-01-2018.
  */
 
-@Entity(tableName = "tbl_todo")
+@Entity(tableName = "tbl_task")
 public class Task {
 
     @PrimaryKey(autoGenerate = true)

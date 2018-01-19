@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_margin="16dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="techniphile.app.com.todomvp.add_todo.AddTaskActivity">
+    tools:context=".ui.add_task.AddTaskActivity">
 
     <EditText
         android:id="@+id/et_task_title"
