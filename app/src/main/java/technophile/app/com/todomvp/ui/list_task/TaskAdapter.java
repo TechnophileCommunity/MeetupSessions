@@ -13,6 +13,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import technophile.app.com.todomvp.R;
+import technophile.app.com.todomvp.listeners.OnItemClickListener;
 import technophile.app.com.todomvp.repository.local.Task;
 
 /**
@@ -23,9 +24,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
 
     private List<Task> taskList = new ArrayList<>();
     private OnDeleteTaskIconClickListener onDeleteTaskIconClickListener;
+    private OnItemClickListener<Task> clickListener;
 
-    public TaskAdapter(OnDeleteTaskIconClickListener onDeleteTaskIconClickListener) {
+    public TaskAdapter(OnDeleteTaskIconClickListener onDeleteTaskIconClickListener, OnItemClickListener<Task> clickListener) {
         this.onDeleteTaskIconClickListener = onDeleteTaskIconClickListener;
+        this.clickListener = clickListener;
     }
 
     @Override
@@ -42,6 +45,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
         holder.ivTaskDelete.setOnClickListener(view -> {
             if (onDeleteTaskIconClickListener != null) {
                 onDeleteTaskIconClickListener.onDeleteIconClicked(task);
+            }
+        });
+
+        holder.itemView.setOnClickListener(view -> {
+            if (clickListener != null) {
+                clickListener.onItemClick(task);
             }
         });
     }

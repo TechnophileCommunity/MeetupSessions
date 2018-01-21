@@ -22,4 +22,7 @@ public interface TaskDao {
 
     @Delete
     int deleteTask(Task task);
+
+    @Query("SELECT * FROM tbl_task WHERE id=:id")
+    Task getTask(int id);
 }
