@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Material Design Codelab</string>
+  <string name="dark_activity">Dark Activity</string>
+  <string name="light_activity">Light Activity</string>
+</resources>

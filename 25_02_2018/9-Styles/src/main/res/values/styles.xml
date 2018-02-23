@@ -1,0 +1,28 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="CodeFont">
+    <item name="android:textSize">14sp</item>
+    <item name="android:textColor">#006fff</item>
+    <item name="android:typeface">monospace</item>
+  </style>
+
+  <style name="Numbers" parent="Base.Widget.AppCompat.EditText">
+    <item name="android:inputType">number</item>
+  </style>
+
+  <style name="CustomButton" parent="@style/Widget.AppCompat.Button">
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:background">@drawable/button_background</item>
+    <item name="android:paddingLeft">8dp</item>
+    <item name="android:paddingRight">8dp</item>
+  </style>
+
+</resources>

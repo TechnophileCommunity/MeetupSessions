@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Material Design Codelab</string>
+  <string name="hello">Hello World!</string>
+  <string name="hint_text">hint text</string>
+</resources>
