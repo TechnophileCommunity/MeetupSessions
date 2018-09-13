@@ -46,8 +46,8 @@ public class AddTaskActivity extends AppCompatActivity implements AddTaskView {
     }
 
     @Override
-    public void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    public void showMessage(int resID) {
+        Toast.makeText(this, getString(resID), Toast.LENGTH_SHORT).show();
     }
 
     @Override

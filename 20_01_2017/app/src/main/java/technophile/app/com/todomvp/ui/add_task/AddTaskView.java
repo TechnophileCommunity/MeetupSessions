@@ -1,5 +1,7 @@
 package technophile.app.com.todomvp.ui.add_task;
 
+import android.support.annotation.StringRes;
+
 /**
  * Created by moinkhan on 18-01-2018.
  */
@@ -9,7 +11,7 @@ public interface AddTaskView {
 
     String getTaskDescription();
 
-    void showToast(String message);
+    void showMessage(@StringRes int resID);
 
     void performSuccessOperation();
 }

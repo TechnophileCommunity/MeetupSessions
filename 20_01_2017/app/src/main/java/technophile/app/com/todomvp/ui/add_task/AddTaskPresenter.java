@@ -1,8 +1,8 @@
 package technophile.app.com.todomvp.ui.add_task;
 
+import technophile.app.com.todomvp.R;
 import technophile.app.com.todomvp.repository.local.Task;
 import technophile.app.com.todomvp.repository.local.TaskDao;
-import technophile.app.com.todomvp.utils.StringUtils;
 
 /**
  * Created by moinkhan on 18-01-2018.
@@ -23,13 +23,13 @@ class AddTaskPresenter {
         String title = view.getTaskTitle();
         String description = view.getTaskDescription();
 
-        if (!StringUtils.isNullOrEmpty(title)) {
-            view.showToast("Title cannot be empty.");
+        if (title == null || title.trim().length() == 0) {
+            view.showMessage(R.string.err_empty_task);
             return;
         }
 
-        if (!StringUtils.isNullOrEmpty(description)) {
-            view.showToast("Description cannot be empty.");
+        if (description == null || description.trim().length() == 0) {
+            view.showMessage(R.string.err_empty_description);
             return;
         }
 
@@ -40,10 +40,10 @@ class AddTaskPresenter {
         long rowAffected = taskDao.insertTask(task);
 
         if (rowAffected > 0) {
-            view.showToast("Task Added.");
+            view.showMessage(R.string.msg_task_added);
             view.performSuccessOperation();
         } else {
-            view.showToast("Something went wrong");
+            view.showMessage(R.string.err_something_wrong);
         }
     }
 }

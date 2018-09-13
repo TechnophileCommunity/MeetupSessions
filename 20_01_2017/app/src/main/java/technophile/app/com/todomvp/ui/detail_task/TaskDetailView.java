@@ -10,4 +10,5 @@ public interface TaskDetailView {
 
     void setTaskDescription(String description);
 
+    void showInvalidTaskID(int resMessage);
 }

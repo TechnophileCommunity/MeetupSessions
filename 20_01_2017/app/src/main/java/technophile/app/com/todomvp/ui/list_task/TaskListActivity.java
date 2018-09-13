@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -78,6 +79,11 @@ public class TaskListActivity extends AppCompatActivity implements TaskListView,
     @Override
     public void removeTaskFromList(Task task) {
         taskAdapter.removeTask(task);
+    }
+
+    @Override
+    public void showErrorMessage(int resString) {
+        Toast.makeText(this, getString(resString), Toast.LENGTH_LONG).show();
     }
 
     @OnClick(R.id.fab_add_task)

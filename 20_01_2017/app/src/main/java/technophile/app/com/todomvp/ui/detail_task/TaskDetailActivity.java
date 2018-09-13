@@ -3,6 +3,7 @@ package technophile.app.com.todomvp.ui.detail_task;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -12,12 +13,13 @@ import technophile.app.com.todomvp.repository.local.AppDatabase;
 public class TaskDetailActivity extends AppCompatActivity implements TaskDetailView {
 
     public static final java.lang.String EXTRA_TASK_ID = "extra_task_id";
+
     @BindView(R.id.tv_task_title)
     TextView tvTaskTitle;
-    
+
     @BindView(R.id.tv_task_description)
     TextView tvTaskDescription;
-    
+
     private TaskDetailPresenter taskDetailPresenter;
 
     @Override
@@ -25,9 +27,9 @@ public class TaskDetailActivity extends AppCompatActivity implements TaskDetailV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_detail);
         ButterKnife.bind(this);
-       
-        int taskId = getIntent().getExtras().getInt(EXTRA_TASK_ID);
-        
+
+        int taskId = getIntent().getExtras().getInt(EXTRA_TASK_ID, -1);
+
         taskDetailPresenter = new TaskDetailPresenter(this, AppDatabase.getInstance(this).taskDao());
         taskDetailPresenter.displayTask(taskId);
     }
@@ -40,5 +42,10 @@ public class TaskDetailActivity extends AppCompatActivity implements TaskDetailV
     @Override
     public void setTaskDescription(String description) {
         tvTaskDescription.setText(description);
+    }
+
+    @Override
+    public void showInvalidTaskID(int resString) {
+        Toast.makeText(this, getString(resString), Toast.LENGTH_SHORT).show();
     }
 }

@@ -1,5 +1,6 @@
 package technophile.app.com.todomvp.ui.detail_task;
 
+import technophile.app.com.todomvp.R;
 import technophile.app.com.todomvp.repository.local.Task;
 import technophile.app.com.todomvp.repository.local.TaskDao;
 
@@ -20,6 +21,11 @@ public class TaskDetailPresenter {
 
     public void displayTask(int taskId) {
         Task task = taskDao.getTask(taskId);
+
+        if (task == null) {
+            taskDetailView.showInvalidTaskID(R.string.err_invalid_task_id);
+            return;
+        }
 
         taskDetailView.setTaskTitle(task.getTitle());
         taskDetailView.setTaskDescription(task.getDescription());

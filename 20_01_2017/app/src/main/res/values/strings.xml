@@ -2,4 +2,10 @@
     <string name="app_name">ToDoMVP</string>
     <string name="add_task">Add Task</string>
     <string name="task_list">Tasks</string>
+    <string name="err_invalid_task_id">Invalid Task ID</string>
+    <string name="err_unable_to_remove_task">Unable to delete task</string>
+    <string name="err_empty_task">Title cannot be empty.</string>
+    <string name="err_empty_description">Description cannot be empty.</string>
+    <string name="err_something_wrong">Something went wrong</string>
+    <string name="msg_task_added">Task Added.</string>
 </resources>

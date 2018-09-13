@@ -17,4 +17,6 @@ public interface TaskListView {
     void hideEmptyView();
 
     void removeTaskFromList(Task task);
+
+    void showErrorMessage(int resString);
 }
